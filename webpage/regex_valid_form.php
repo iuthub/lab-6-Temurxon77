@@ -13,8 +13,8 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
 	$replaceText=$_POST["replaceText"];
 
 	$replacedText=preg_replace($pattern, $replaceText, $text);
-
-	if(preg_match($pattern, $text)) {
+	
+	if(preg_match_all($pattern, $text)) {
 						$match="Match!";
 					} else {
 						$match="Does not match!";
